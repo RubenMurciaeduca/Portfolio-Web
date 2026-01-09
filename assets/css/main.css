@@ -11,6 +11,12 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
+:root {
+  --default-font: "Lato", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Montserrat", sans-serif;
+  --nav-font: "Roboto", sans-serif;
+}
+
 :root { 
   --background-color: #0d0d0d; /* Fondo general, casi negro para máxima elegancia */
   --default-color: #eaeaea; /* Texto principal, un gris muy claro */
@@ -44,10 +50,6 @@
   --contrast-color: #ffffff;
 }
 
-/* Smooth scroll */
-:root {
-  scroll-behavior: smooth;
-}
 
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
