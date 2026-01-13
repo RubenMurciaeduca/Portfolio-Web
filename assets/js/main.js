@@ -201,4 +201,46 @@
 
   });
 
+  /**
+ * Breadcrumbs dinámicos
+ */
+const breadcrumbContainer = document.getElementById('breadcrumb');
+
+if (breadcrumbContainer) {
+  // Define la jerarquía de las páginas
+  const routes = {
+    'index.html': ['Home'],
+    'about.html': ['Home', 'About'],
+    'resume.html': ['Home', 'Resume'],
+    'portfolio.html': ['Home', 'Portfolio'],
+    'portfolio-details.html': ['Home', 'Portfolio', 'Portfolio Details'],
+    'contact.html': ['Home', 'Contact']
+  };
+
+  // Obtén el nombre del archivo actual
+  const path = window.location.pathname.split('/').pop(); // ej: portfolio-details.html
+  const crumbs = routes[path] || ['Home'];
+
+  // Genera el HTML de Bootstrap
+  let html = crumbs.map((name, index) => {
+    if (index === crumbs.length - 1) {
+      return `<li class="breadcrumb-item active" aria-current="page">${name}</li>`;
+    } else {
+      let link = '';
+      switch(name) {
+        case 'Home': link = 'index.html'; break;
+        case 'About': link = 'about.html'; break;
+        case 'Resume': link = 'resume.html'; break;
+        case 'Portfolio': link = 'portfolio.html'; break;
+        case 'Contact': link = 'contact.html'; break;
+        default: link = '#'; // Otros casos
+      }
+      return `<li class="breadcrumb-item"><a href="${link}">${name}</a></li>`;
+    }
+  }).join('');
+
+  breadcrumbContainer.innerHTML = html;
+}
+
+
 })();
