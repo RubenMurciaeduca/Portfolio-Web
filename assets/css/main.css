@@ -123,6 +123,49 @@ h6 {
   animation: php-email-form-loading 1s linear infinite;
 }
 
+.input-vibrante {
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color) 65%, white)
+  );
+  border: none;
+  border-radius: 1rem;
+  padding: 0.75rem 1rem;
+  font-weight: bold;
+  color: var(--background-color);
+  caret-color: var(--background-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-vibrante::placeholder {
+  color: var(--background-color);
+  font-weight: 900;
+}
+
+
+.input-vibrante:focus {
+  outline: none;
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(255, 111, 97, 0.8);
+}
+
+/* Botón llamativo para que no sea un diseño tan opaco */
+.btn-salton {
+  background: linear-gradient(90deg, #ffcc00, #ff4d4d); /* amarillo a rojo */
+  color: white;
+  font-weight: bold;
+  border-radius: 2rem;
+  padding: 0.75rem 1.5rem;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.btn-salton:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+
 @keyframes php-email-form-loading {
   0% {
     transform: rotate(0deg);
@@ -1392,29 +1435,12 @@ section,
   }
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-}
-
 .contact .php-email-form input[type=text]:focus,
 .contact .php-email-form input[type=email]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--accent-color);
 }
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
 
 .contact .php-email-form button[type=submit] {
   color: var(--contrast-color);
