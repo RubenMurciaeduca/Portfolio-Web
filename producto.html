@@ -3,28 +3,188 @@ es una maquetacion de una pagina como la de un producto de pccomponentes
 y no esta linkada con nada mas, es como un ejemplo de si hicieramos un producto
 como lo maquetariamos
 -->
-      <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
-              </ul>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Producto - Rubén Martínez</title>
+  <meta name="description" content="Ficha de producto de Rubén Martínez. Ejemplo de maquetación tipo PCComponentes.">
+  <meta name="keywords" content="Rubén Martínez, DAW, Portfolio, Producto, PCComponentes">
+
+  <!-- Favicons -->
+  <link href="assets/img/my_favicon.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <!-- ======= Header (navbar respetada) ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1>MiPortfolio</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="about.html">Resume+About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <main class="main">
+
+    <!-- ======= Page Title & Breadcrumbs ======= -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container text-center">
+          <h1>Ficha de Producto</h1>
+          <p class="mb-0">Ejemplo de página de producto tipo PCComponentes, mostrando detalles, imágenes y precio.</p>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li class="current">Producto</li>
+          </ol>
+        </div>
+      </nav>
+    </div>
+    <!-- End Page Title -->
+
+    <!-- ======= Product Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <!-- Galería -->
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper" data-aos="fade-up">
+              <div class="swiper-wrapper">
+
+                <div class="product-img">
+                  <img src="assets/img/pagina_producto/producto.png" alt="Producto1">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
-            <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-              </p>
+          </div>
+
+          <!-- Información del producto -->
+          <div class="col-lg-4">
+            <div class="portfolio-info product-card" data-aos="fade-left">
+              <h3>ASUS TUF Gaming F15</h3>
+              <ul>
+                <li><strong>Marca:</strong> ASUS</li>
+                <li><strong>Procesador:</strong> Intel Core i7-12700H</li>
+                <li><strong>Memoria RAM:</strong> 16 GB DDR5</li>
+                <li><strong>Gráfica:</strong> NVIDIA RTX 4060</li>
+                <li><strong>Almacenamiento:</strong> SSD 1 TB</li>
+                <li><strong>Estado:</strong> <span class="text-success">En stock</span></li>
+              </ul>
+
+              <div class="product-price mt-3 mb-3">
+                1.299 €
+                <span>IVA incluido</span>
+              </div>
+
+              <button class="btn btn-salton w-100">
+                Añadir al carrito
+              </button>
             </div>
           </div>
 
         </div>
 
+        <!-- Descripción -->
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <div class="portfolio-description" data-aos="fade-up">
+              <h2>Descripción del producto</h2>
+              <p>
+                El ASUS TUF Gaming F15 es un portátil gaming diseñado para ofrecer
+                el máximo rendimiento tanto en videojuegos como en tareas
+                profesionales exigentes. Su combinación de procesador Intel
+                de última generación y gráfica RTX garantiza una experiencia fluida
+                y potente.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-    </section><!-- End Portfolio Details Section -->
+    </section>
+    <!-- End Product Details Section -->
 
-  </main><!-- End #main -->
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h3 class="sitename">MiPortfolio</h3>
+      <p>Ejemplo de integración de página de producto con plantilla Bootstrap personal.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        © 2026 MiPortfolio. Todos los derechos reservados.
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
