@@ -152,7 +152,7 @@ h6 {
 
 /* Botón llamativo para que no sea un diseño tan opaco */
 .btn-salton {
-  background: linear-gradient(90deg, #ffcc00, #ff4d4d); /* amarillo a rojo */
+  background: linear-gradient(105deg, #000000, #ff4d4d);
   color: white;
   font-weight: bold;
   border-radius: 2rem;
