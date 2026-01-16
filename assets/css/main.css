@@ -1196,8 +1196,28 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Portfolio Section
+# Section
 --------------------------------------------------------------*/
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.portfolio-content img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: top left;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.portfolio-info {
+  flex-grow: 1; /* fuerza que la info quede alineada abajo */
+}
+
+
 .portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
