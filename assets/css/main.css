@@ -927,7 +927,116 @@ section,
   display: none;
 }
 
+/* ===========================
+   Skills Section Dark Mode
+=========================== */
 
+.skills.section {
+  padding: 80px 0;
+  background-color: var(--background-color);
+}
+
+.skills .section-title h2 {
+  font-family: var(--heading-font);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--heading-color);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.skills .section-title p {
+  font-family: var(--default-font);
+  font-size: 16px;
+  color: var(--default-color);
+  max-width: 600px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+/* Tarjetas */
+.skills .card {
+  background-color: var(--surface-color);
+  color: var(--default-color);
+  border: none;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* Iconos circulares */
+.skills .icon-circle {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background-color: var(--accent-color, #ff6f61); /* por defecto tu accent */
+  color: var(--contrast-color);
+}
+
+.skills .card:hover .icon-circle {
+  transform: scale(1.1);
+}
+
+/* Titulos de las cards */
+.skills .card h5 {
+  font-family: var(--heading-font);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 10px;
+}
+
+/* Parrafos de las cards */
+.skills .card p {
+  font-family: var(--default-font);
+  font-size: 15px;
+  color: var(--default-color);
+  line-height: 1.6;
+}
+
+/* Hover icon colors específicos */
+.skills .card:nth-child(1) .icon-circle { background-color: #00796B; }
+.skills .card:nth-child(2) .icon-circle { background-color: #FFC107; color: #1f1f1f; }
+.skills .card:nth-child(3) .icon-circle { background-color: #2196F3; }
+.skills .card:nth-child(4) .icon-circle { background-color: #FF5722; }
+.skills .card:nth-child(5) .icon-circle { background-color: #9C27B0; }
+
+/* Animaciones AOS */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-out;
+}
+
+/* Responsividad */
+@media (max-width: 991px) {
+  .skills .card {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .skills .section-title h2 {
+    font-size: 28px;
+  }
+}
+
+
+#skills > div.container.section-title.aos-init.aos-animate {
+  text-align: center;
+}
 
 /*--------------------------------------------------------------
 # Stats Section
