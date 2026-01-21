@@ -1625,6 +1625,12 @@ section,
 
 /* Pagina de producto para el portfolio (PcComponentes-like) */
 
+.carousel-item img {
+  height: 630px; /* ajusta a lo que necesites */
+  object-fit: cover;
+}
+
+
 /* Separación general */
 .portfolio-details {
   padding-top: 80px;
