@@ -85,34 +85,28 @@
 
         <div class="row gy-4">
 
-          <!-- Imagen de vista previa -->
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper init-swiper">
+        <div class="col-lg-8">
+          <div class="portfolio-details-slider swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": { "delay": 5000 },
+                "slidesPerView": "auto",
+                "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }
+              }
+            </script>
 
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
-
-              <div class="swiper-wrapper align-items-center">
-                <div>
-                  <img src="assets/img/preview_animacion.png" alt="Animaciones y Transiciones">
-                </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="assets/img/preview_animacion.png" alt="Animaciones y Transiciones">
               </div>
-
             </div>
+
+            <div class="swiper-pagination"></div>
           </div>
+        </div>
+
 
           <!-- Información del proyecto -->
           <div class="col-lg-4">
@@ -128,10 +122,9 @@
 
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
               <h2>Descripción del proyecto</h2>
-              <p>
-                Este proyecto estaba destinado a la práctica de animaciones y transiciones en CSS.
-                Aquí obtienes un link para poder ver la animación del niño chutando una pelota.
-              </p>
+                <p>
+                  Este proyecto practica animaciones y transiciones en CSS. Aquí se muestra una animación de un niño chutando una pelota, con movimiento de curva y sol giratorio.
+                </p>
             </div>
           </div>
 
@@ -146,7 +139,7 @@
   <footer id="footer" class="footer dark-background">
     <div class="container">
       <h3 class="sitename">Personal</h3>
-      <p>Proyecto pendiente de animaciones y transiciones. Aún no disponible.</p>
+      <p>Proyecto de animaciones y transiciones.</p>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-linkedin"></i></a>
       </div>

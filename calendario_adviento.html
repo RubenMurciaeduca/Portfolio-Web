@@ -84,33 +84,27 @@
 
         <div class="row gy-4">
 
-          <!-- Slider / Imagen placeholder -->
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper init-swiper">
+        <div class="col-lg-8">
+          <div class="portfolio-details-slider swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": { "delay": 5000 },
+                "slidesPerView": "auto",
+                "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }
+              }
+            </script>
 
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
-
-              <div class="swiper-wrapper align-items-center">
-                <div>
-                  <img src="assets/img/calendario_svg/svg.png" alt="Proyecto temporal">
-                </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="assets/img/calendario_svg/svg.png" alt="Proyecto temporal">
               </div>
             </div>
+
+            <div class="swiper-pagination"></div>
           </div>
+        </div>
 
           <!-- Información y descripción -->
           <div class="col-lg-4">
@@ -126,7 +120,7 @@
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
               <h2>Descripción</h2>
               <p>
-                Después de un gran esfuerzo, he logrado recuperar este proyecto y restaurar sus archivos. Gracias a esto, he podido modificar y mejorar el calendario del proyecto, aplicando optimizaciones y ajustes que ahora permiten mostrarlo de manera funcional y visualmente más clara
+                Proyecto de calendario de adviento realizado con SVG. Se recuperaron y optimizaron los archivos, mejorando la visualización y la funcionalidad del calendario.
               </p>
             </div>
           </div>
