@@ -111,7 +111,6 @@ h1 + p {
 #uno div:first-child {
   grid-area: intro;
   grid-column: 1 / -1;
-  margin: 0 4px 4px 4px;
 }
 
 .day.dia_uno { grid-area: dia_uno; }
