@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimización de Imágenes para la Web</title>
+    <link rel="stylesheet" href="ruben.css">
+</head>
+<body>
+
+    <h1>Optimización de Imágenes para la Web</h1>
+    <p>Se proporciona un conjunto de imágenes en diferentes formatos. El objetivo es reducir su peso manteniendo la mejor calidad posible y justificar el uso de cada formato.</p>
+
+    <!-- EJERCICIO 1 -->
+    <h2>Ejercicio 1 — Optimización conservando el formato</h2>
+    <p><strong>Herramientas utilizadas:</strong> Squoosh, TinyPNG</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Formato</th>
+                <th>Peso Original</th>
+                <th>Peso Optimizado</th>
+                <th>Reducción (%)</th>
+                <th>Justificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="img/img1.gif"></td>
+                    <td>GIF</td>
+                    <td>162 KB</td>
+                    <td>120 KB</td>
+                    <td>25.9%</td>
+                    <td>GIF es ideal…</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="img/img2.jpg"></td>
+                    <td>JPG</td>
+                    <td>426 KB</td>
+                    <td>238 KB</td>
+                    <td>44%</td>
+                    <td>JPG es el formato…</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="img/img3.jpg"></td>
+                    <td>JPG</td>
+                    <td>8.29 MB</td>
+                    <td>5.41 MB</td>
+                    <td>34.7%</td>
+                    <td>Para fotografías…</td>
+                </tr>
+            <tr>
+                <td><img src="img/img4.jpg"></td>
+                <td>JPG</td>
+                <td>8.29 MB</td>
+                <td>5.41 MB</td>
+                <td>34.7%</td>
+                <td>JPG es óptimo…</td>
+            </tr>
+            <tr>
+                <td><img src="img/img5.jpg"></td>
+                <td>JPG</td>
+                <td>1.61 MB</td>
+                <td>798 KB</td>
+                <td>50.5%</td>
+                <td>La compresión…</td>
+            </tr>
+            <tr>
+                <td><img src="img/img6.jpg"></td>
+                <td>JPG</td>
+                <td>372 KB</td>
+                <td>155 KB</td>
+                <td>58.1%</td>
+                <td>JPG permite…</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="img/img7.jpg"></td>
+                    <td>JPG</td>
+                    <td>252 KB</td>
+                    <td>228 KB</td>
+                    <td>9.5%</td>
+                    <td>Aunque la reducción…</td>
+            </tr>
+            <tr>
+                <td><img src="img/img8.jpg"></td>
+                <td>JPG</td>
+                <td>1.14 MB</td>
+                <td>740 KB</td>
+                <td>35.1%</td>
+                <td>JPG es el formato…</td>
+            </tr>
+            <tr>
+                <td><img src="img/img9.jpg"></td>
+                <td>JPG</td>
+                <td>722 KB</td>
+                <td>395 KB</td>
+                <td>45.3%</td>
+                <td>La compresión…</td>
+            </tr>
+            <tr>
+                <td><img src="img/img10.jpg"></td>
+                <td>JPG</td>
+                <td>351 KB</td>
+                <td>225 KB</td>
+                <td>35.9%</td>
+                <td>JPG optimiza…</td>
+            </tr>
+            <tr>
+                <td><img src="img/img11.jpg"></td>
+                <td>JPG</td>
+                <td>286 KB</td>
+                <td>113 KB</td>
+                <td>60.1%</td>
+                <td>Para fotografías…</td>
+            </tr>
+            <tr>
+                <td><img src="img/img12.png"></td>
+                <td>PNG</td>
+                <td>135 KB</td>
+                <td>85 KB</td>
+                <td>37%</td>
+                <td>PNG es esencial…</td>
+            </tr>
+            <tr>
+                <td><img src="img/img13.png"></td>
+                <td>PNG</td>
+                <td>1.45 MB</td>
+                <td>659 KB</td>
+                <td>54.6%</td>
+                <td>PNG es ideal…</td>
+            </tr>
+            <tr>
+                <td><img src="img/img14.png"></td>
+                <td>PNG</td>
+                <td>427 KB</td>
+                <td>220 KB</td>
+                <td>48.4%</td>
+                <td>PNG mantiene…</td>
+            </tr>
+            <tr>
+                <td><img src="img/img15.png"></td>
+                <td>PNG</td>
+                <td>29 KB</td>
+                <td>15 KB</td>
+                <td>48.3%</td>
+                <td>Para iconos…</td>
+            </tr>
+            <tr>
+                <td><img src="img/img16.gif"></td>
+                <td>GIF</td>
+                <td>162 KB</td>
+                <td>120 KB</td>
+                <td>25.9%</td>
+                <td>GIF es el único…</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- EJERCICIO 2 -->
+    <h2>Ejercicio 2 — Optimización cambiando el formato</h2>
+    <p><strong>Herramientas utilizadas:</strong> Squoosh, TinyPNG</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Formato Original</th>
+                <th>Peso Original</th>
+                <th>Nuevo Formato</th>
+                <th>Peso Optimizado</th>
+                <th>Reducción (%)</th>
+                <th>Justificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="img_1/img1.gif"></td>
+                <td>GIF</td>
+                <td>162 KB</td>
+                <td>WebP</td>
+                <td>14.2 KB</td>
+                <td>91%</td>
+                <td>WebP animado…</td>
+            </tr>
+            <tr>
+                <td><img src="img_1/img2.webp"></td>
+                <td>JPG</td>
+                <td>426 KB</td>
+                <td>WebP</td>
+                <td>238 KB</td>
+                <td>44%</td>
+                <td>WebP proporciona…</td>
+            </tr>
+            <tr>
+                <td><img src="img_1/img3.avif"></td>
+                <td>JPG</td>
+                <td>8.29 MB</td>
+                <td>AVIF</td>
+                <td>5.41 MB</td>
+                <td>35%</td>
+                <td>AVIF ofrece…</td>
+            </tr>
+            <tr>
+                <td><img src="img_1/img4.avif"></td>
+                <td>JPG</td>
+                <td>8.29 MB</td>
+                <td>AVIF</td>
+                <td>5.41 MB</td>
+                <td>35%</td>
+                <td>AVIF mantiene…</td>
+            </tr>
+            <tr>
+                <td><img src="img_1/img5.avif"></td>
+                <td>JPG</td>
+                <td>1.61 MB</td>
+                <td>AVIF</td>
+                <td>798 KB</td>
+                <td>51%</td>
+                <td>AVIF es más…</td>
+            </tr>
+            <tr>
+                <td><img src="img_1/img6.avif"></td>
+                <td>JPG</td>
+                <td>372 KB</td>
+                <td>AVIF</td>
+                <td>155 KB</td>
+                <td>58%</td>
+                <td>AVIF supera…</td>
+            </tr>
+            <tr>
+                <td><img src="img_1/img7.jpg"></td>
+                <td>JPG</td>
+                <td>252 KB</td>
+                <td>JPG</td>
+                <td>228 KB</td>
+                <td>10%</td>
+                <td>Se mantiene JPG…</td>
+            </tr>
+            <tr>
+                <td><img src="img_1/img8.avif"></td>
+                <td>JPG</td>
+                <td>1.14 MB</td>
+                <td>AVIF</td>
+                <td>240 KB</td>
+                <td>79%</td>
+                <td>AVIF logra…</td>
+            </tr>
+            <tr>
+                <td><img src="img_1/img9.webp"></td>
+                <td>JPG</td>
+                <td>722 KB</td>
+                <td>WebP</td>
+                <td>395 KB</td>
+                <td>45%</td>
+                <td>WebP ofrece…</td>
+            </tr>
+            <tr>
+                <td><img src="img_1/img10.webp"></td>
+                <td>JPG</td>
+                <td>351 KB</td>
+                <td>WebP</td>
+                <td>225 KB</td>
+                <td>36%</td>
+                <td>WebP ofrece…</td>
+            </tr>
+            <tr>
+                <td><img src="img_1/img11.avif"></td>
+                <td>JPG</td>
+                <td>286 KB</td>
+                <td>AVIF</td>
+                <td>113 KB</td>
+                <td>60%</td>
+                <td>AVIF es óptimo…</td>
+            </tr>
+            <tr>
+                <td><img src="img_1/img12.avif"></td>
+                <td>PNG</td>
+                <td>135 KB</td>
+                <td>AVIF</td>
+                <td>17.4 KB</td>
+                <td>87%</td>
+                <td>AVIF con soporte…</td>
+            </tr>
+            <tr>
+                <td><img src="img_1/img13.avif"></td>
+                <td>PNG</td>
+                <td>1.45 MB</td>
+                <td>AVIF</td>
+                <td>659 KB</td>
+                <td>55%</td>
+                <td>AVIF es más…</td>
+            </tr>
+            <tr>
+                <td><img src="img_1/img14.jpeg"></td>
+                <td>PNG</td>
+                <td>427 KB</td>
+                <td>JPG</td>
+                <td>89.2 KB</td>
+                <td>79%</td>
+                <td>Convertir PNG…</td>
+            </tr>
+            <tr>
+                <td><img src="img_1/img15.avif"></td>
+                <td>PNG</td>
+                <td>29 KB</td>
+                <td>AVIF</td>
+                <td>15.9 KB</td>
+                <td>45%</td>
+                <td>Para iconos…</td>
+            </tr>
+            <tr>
+                <td><img src="img_1/img16.webp"></td>
+                <td>GIF</td>
+                <td>162 KB</td>
+                <td>WebP</td>
+                <td>11.9 KB</td>
+                <td>93%</td>
+                <td>WebP animado…</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- EJERCICIO 3 -->
+    <h2>Ejercicio 3 — Optimización por cambio de tamaño</h2>
+    <p><strong>Criterios:</strong> Ancho máximo 1200px, 800px, 500px</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Original</th>
+                <th>1200px</th>
+                <th>800px</th>
+                <th>500px</th>
+                <th>Reducción Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="img_3/img1.gif"></td>
+                <td>162 KB</td>
+                <td>95 KB</td>
+                <td>58 KB</td>
+                <td>32 KB</td>
+                <td>80.2%</td>
+            </tr>
+            <tr>
+                <td><img src="img_3/img2.jpg"></td>
+                <td>426 KB</td>
+                <td>180 KB</td>
+                <td>98 KB</td>
+                <td>52 KB</td>
+                <td>87.8%</td>
+            </tr>
+            <tr>
+                <td><img src="img_3/img3.avif"></td>
+                <td>8.29 MB</td>
+                <td>420 KB</td>
+                <td>225 KB</td>
+                <td>115 KB</td>
+                <td>98.6%</td>
+            </tr>
+            <tr>
+                <td><img src="img_3/img4.avif"></td>
+                <td>8.29 MB</td>
+                <td>415 KB</td>
+                <td>220 KB</td>
+                <td>112 KB</td>
+                <td>98.6%</td>
+            </tr>
+            <tr>
+                <td><img src="img_3/img5.jpg"></td>
+                <td>1.61 MB</td>
+                <td>245 KB</td>
+                <td>135 KB</td>
+                <td>68 KB</td>
+                <td>95.8%</td>
+            </tr>
+            <tr>
+                <td><img src="img_3/img6.jpg"></td>
+                <td>372 KB</td>
+                <td>98 KB</td>
+                <td>56 KB</td>
+                <td>32 KB</td>
+                <td>91.4%</td>
+            </tr>
+            <tr>
+                <td><img src="img_3/img7.jpg"></td>
+                <td>252 KB</td>
+                <td>125 KB</td>
+                <td>72 KB</td>
+                <td>42 KB</td>
+                <td>83.3%</td>
+            </tr>
+            <tr>
+                <td><img src="img_3/img8.jpg"></td>
+                <td>1.14 MB</td>
+                <td>195 KB</td>
+                <td>108 KB</td>
+                <td>58 KB</td>
+                <td>94.9%</td>
+            </tr>
+            <tr>
+                <td><img src="img_3/img9.jpg"></td>
+                <td>722 KB</td>
+                <td>165 KB</td>
+                <td>92 KB</td>
+                <td>48 KB</td>
+                <td>93.4%</td>
+            </tr>
+            <tr>
+                <td><img src="img_3/img10.jpg"></td>
+                <td>351 KB</td>
+                <td>128 KB</td>
+                <td>75 KB</td>
+                <td>42 KB</td>
+                <td>88%</td>
+            </tr>
+            <tr>
+                <td><img src="img_3/img11.jpg"></td>
+                <td>286 KB</td>
+                <td>85 KB</td>
+                <td>48 KB</td>
+                <td>28 KB</td>
+                <td>90.2%</td>
+            </tr>
+            <tr>
+                <td><img src="img_3/img12.png"></td>
+                <td>135 KB</td>
+                <td>45 KB</td>
+                <td>28 KB</td>
+                <td>18 KB</td>
+                <td>86.7%</td>
+            </tr>
+            <tr>
+                <td><img src="img_3/img13.jpg"></td>
+                <td>1.45 MB</td>
+                <td>285 KB</td>
+                <td>152 KB</td>
+                <td>82 KB</td>
+                <td>94.3%</td>
+            </tr>
+            <tr>
+                <td><img src="img_3/img14.jpg"></td>
+                <td>427 KB</td>
+                <td>125 KB</td>
+                <td>68 KB</td>
+                <td>38 KB</td>
+                <td>91.1%</td>
+            </tr>
+            <tr>
+                <td><img src="img_3/img15.webp"></td>
+                <td>29 KB</td>
+                <td>15 KB</td>
+                <td>12 KB</td>
+                <td>8 KB</td>
+                <td>72.4%</td>
+            </tr>
+            <tr>
+                <td><img src="img_3/img16.gif"></td>
+                <td>162 KB</td>
+                <td>92 KB</td>
+                <td>55 KB</td>
+                <td>30 KB</td>
+                <td>81.5%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="reflexion">
+        <h2>Reflexión Final</h2>
+        <p>Para una buena compresión de imágenes sin perder calidad en la web, es fundamental elegir el formato adecuado según el tipo de contenido y el contexto de uso:</p>
+        
+        <h3>Formatos Modernos Recomendados</h3>
+        <p><strong>AVIF:</strong> Ofrece la mejor compresión para fotografías, logrando reducciones de hasta 90% manteniendo excelente calidad. Es ideal para imágenes de alta resolución en sitios web modernos. Soporta transparencia y tiene un rendimiento superior a todos los formatos tradicionales.</p>
+        
+        <p><strong>WebP:</strong> Excelente balance entre compresión, compatibilidad y calidad. Soporta transparencia y animación, siendo superior a JPG, PNG y GIF. Ampliamente soportado en navegadores actuales, lo que lo convierte en una opción segura para la mayoría de proyectos web.</p>
+
+        <h3>Formatos Tradicionales (Fallback)</h3>
+        <p><strong>JPG:</strong> Estándar universal para fotografías. Aunque formatos modernos son más eficientes, JPG mantiene su relevancia como fallback para navegadores antiguos y por su compatibilidad del 100%.</p>
+        
+        <p><strong>PNG:</strong> Necesario para imágenes con transparencia cuando WebP o AVIF no están disponibles. Ideal para logos, iconos y gráficos con bordes nítidos que requieren compresión sin pérdida.</p>
+        
+        <p><strong>GIF:</strong> Limitado a animaciones simples cuando WebP animado no es opción. Su paleta de 256 colores lo hace obsoleto para la mayoría de casos modernos.</p>
+
+        <h3>Optimización por Tamaño (Responsive Images)</h3>
+        <p>El diseño responsivo es crucial para el rendimiento web. Implementar diferentes tamaños de imagen según el dispositivo (1200px para desktop, 800px para tablet, 500px para móvil) puede reducir el peso total en más del 90%, mejorando dramáticamente los tiempos de carga y la experiencia de usuario. Usar las etiquetas HTML <code>&lt;picture&gt;</code> y el atributo <code>srcset</code> permite al navegador seleccionar automáticamente el tamaño más apropiado.</p>
+
+        <h3>Gestión de Metadatos</h3>
+        <p>Mantener solo metadatos relevantes (título, palabras clave, copyright, autor) mejora el SEO, protege los derechos de autor y reduce el tamaño del archivo eliminando información innecesaria como datos de cámara, ubicación GPS y miniaturas embebidas.</p>
+
+        <h3>Estrategia Recomendada</h3>
+        <p>La estrategia óptima combina formatos modernos (AVIF/WebP) con fallback a formatos tradicionales (JPG/PNG), implementa responsive images, y mantiene metadatos limpios y relevantes. Esta combinación garantiza máxima optimización sin sacrificar calidad ni compatibilidad, resultando en sitios web más rápidos, accesibles y eficientes.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+*{ margin:0; padding:0; box-sizing:border-box; }
+
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background: linear-gradient(#7bd1ff 60%, #3a9cff 40%);
+}
+
+.campo{
+  position:relative;
+  width:500px;
+  height:350px;
+  background: linear-gradient(to bottom, #8de27a 60%, #5abf4b 40%);
+  border-radius: 12px;
+  overflow:hidden;
+}
+
+#nino{
+  position:absolute;
+  left: 40px;
+  bottom: 30px;
+  width: 120px;
+  animation: chutar 3s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes chutar {
+  0%   { transform: rotate(0deg); }
+  30%  { transform: rotate(0deg); }
+  45%  { transform: rotate(-7deg); }  /* carga */
+  55%  { transform: rotate(5deg); }   /* golpe */
+  65%  { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+#pelota{
+  position:absolute;
+  left: 140px;
+  bottom: 95px;
+  width: 34px;
+  animation: pelotaVuelo 3s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes pelotaVuelo {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  30% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  45% {
+    transform: translate(120px, -120px) rotate(240deg);
+  }
+  60% {
+    transform: translate(240px, -160px) rotate(480deg);
+  }
+  75% {
+    transform: translate(320px, -60px) rotate(720deg);
+  }
+  82% {
+    transform: translate(340px, -30px) rotate(840deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.sombra{
+  position:absolute;
+  left: 145px;
+  bottom: 80px;
+  width: 32px;
+  height: 7px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 50%;
+  animation: sombraPelota 3s ease-in-out infinite;
+}
+
+@keyframes sombraPelota {
+  0%, 30% {
+    transform: translateX(0) scale(1);
+    opacity: 0.4;
+  }
+  55% {
+    transform: translateX(190px) scale(0.6);
+    opacity: 0.25;
+  }
+  78% {
+    transform: translateX(320px) scale(0.9);
+    opacity: 0.35;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 0.4;
+  }
+}
+
+#porteria{
+  position:absolute;
+  right: 20px;
+  top: 150px;
+  width: 160px;
+  opacity: 0.95;
+  animation: porteriaImpacto 3s ease-in-out infinite;
+}
+
+@keyframes porteriaImpacto {
+  0%, 70%, 100% { transform: translateX(0); }
+  78% { transform: translateX(4px); }
+  82% { transform: translateX(-4px); }
+  86% { transform: translateX(2px); }
+}
+
+#sol{
+  position: absolute;
+  top: 10px;        /* más arriba */
+  right: 20px;
+  width: 105px;      /* más pequeño → más lejano */
+  height: auto;
+  animation: girarSol 18s linear infinite;
+  transform-origin: center center;
+  z-index: 0;       /* queda detrás del resto */
+  opacity: 1;
+}
+
+@keyframes girarSol {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
