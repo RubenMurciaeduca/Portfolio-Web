@@ -988,6 +988,70 @@ section,
   transform: scale(1.1);
 }
 
+/* Tech Details Cards (Resume) */
+
+.tech-details h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tech-card {
+  background: color-mix(in srgb, var(--surface-color), transparent 5%);
+  border-radius: 16px;
+  padding: 18px 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 35%);
+  box-shadow: 0 18px 40px rgba(0,0,0,.5);
+}
+
+.tech-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.tech-icon {
+  font-size: 44px;
+  line-height: 1;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,.35));
+}
+
+.tech-card h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: var(--heading-color);
+}
+
+.tech-badge {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 10%);
+}
+
+.tech-card p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--default-color), transparent 18%);
+}
+
+
 /* Titulos de las cards */
 .skills .card h5 {
   font-family: var(--heading-font);
