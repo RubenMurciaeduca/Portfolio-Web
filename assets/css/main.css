@@ -1365,6 +1365,10 @@ section,
   position: relative;
 }
 
+.resume-item, .profile-text {
+  margin-left: 2em;
+}
+
 .resume .resume-item h4 {
   line-height: 18px;
   font-size: 18px;
