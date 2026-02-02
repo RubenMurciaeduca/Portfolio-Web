@@ -1428,6 +1428,10 @@ section,
   margin-bottom: 10px;
 }
 
+div.col-lg-4:nth-child(4) > div:nth-child(1) > img:nth-child(1) {
+  object-position: center center;
+}
+
 .portfolio-info {
   flex-grow: 1; /* fuerza que la info quede alineada abajo */
 }
